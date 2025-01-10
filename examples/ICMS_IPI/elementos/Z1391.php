@@ -6,7 +6,7 @@ require_once '../../../bootstrap.php';
 use NFePHP\EFD\Elements\ICMSIPI\Z1391;
 
 $std = new stdClass();
-$std->DT_REGISTRO = '01012018';
+$std->DT_REGISTRO = '01012024';
 $std->QTD_MOID = 100.00;
 $std->ESTQ_INI = 200.00;
 $std->QTD_PRODUZ = 300.00;
@@ -21,7 +21,13 @@ $std->ESTQ_INI_MEL = 100.00;
 $std->PROD_DIA_MEL = 400.00;
 $std->UTIL_MEL = 26.00;
 $std->PROD_ALC_MEL = 45.00;
-$std->OBS = 'Observações';
+$std->OBS = 'Observacoes';
+$std->COD_ITEM = '1234';
+$std->TP_RESIDUO  = '01';
+$std->QTD_RESIDUO = 200.00;
+$std->QTD_RESIDUO_DDG = 0.00;
+$std->QTD_RESIDUO_WDG = 0.00;
+$std->QTD_RESIDUO_CANA = 0.00;
 
 try {
     $b1 = new Z1391($std);

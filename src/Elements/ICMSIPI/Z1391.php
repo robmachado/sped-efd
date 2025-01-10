@@ -125,6 +125,48 @@ class Z1391 extends Element
             'required' => false,
             'info'     => 'Observações',
             'format'   => ''
+        ],
+        "COD_ITEM" => [
+           "type" => "string",
+            "regex" => "^.{1,60}$",
+            "required" => true,
+            "info" => "Informar o insumo conforme codigo do item (campo 02 do Registro 0200)",
+            "format" => ""
+        ],
+        "TP_RESIDUO" => [
+            "type" => "string",
+            "regex" => "^(01|02|03|04)$",
+            "required" => true,
+            "info" => "Tipo de resíduo produzido =>01-Bagaço de cana; 02-DDG; 03–WDG; 04–(DDG + WDG)",
+            "format" => ""
+        ],
+        "QTD_RESIDUO" => [
+            "type" => "numeric",
+            "regex" => "^\\d+(\\.\\d*)?|\\.\\d+$",
+            "required" => true,
+            "info" => "Quantidade de resíduo produzido (toneladas).",
+            "format" => "15v2"
+        ],
+        "QTD_RESIDUO_DDG" => [
+            "type" => "numeric",
+            "regex" => "^\\d+(\\.\\d*)?|\\.\\d+$",
+            "required" => true,
+            "info" => "Quantidade de resíduo produzido de DDG (toneladas).",
+            "format" => "15v2"
+        ],
+        "QTD_RESIDUO_WDG" => [
+            "type" => "numeric",
+            "regex" => "^\\d+(\\.\\d*)?|\\.\\d+$",
+            "required" => true,
+            "info" => "Quantidade de resíduo produzido de WDG (toneladas).",
+            "format" => "15v2"
+        ],
+        "QTD_RESIDUO_CANA" => [
+            "type" => "numeric",
+            "regex" => "^\\d+(\\.\\d*)?|\\.\\d+$",
+            "required" => true,
+            "info" => "Quantidade de resíduo produzido de bagaço de cana (toneladas).",
+            "format" => "15v2"
         ]
     ];
 
